@@ -192,7 +192,10 @@ public class DtsActive extends Active {
                 || "".equalsIgnoreCase(dtstype)
                 || null == dtstype 
                 || "业务规则".equalsIgnoreCase(dtstype)
-                || "null".equalsIgnoreCase(dtstype)) {
+                || "null".equalsIgnoreCase(dtstype)
+        	|| "单据表体".equalsIgnoreCase(dtstype)
+    		|| "单据表头".equalsIgnoreCase(dtstype))
+        {
             return "";
         }
 
@@ -237,6 +240,8 @@ public class DtsActive extends Active {
                 || null == dtstype 
         		|| "".equalsIgnoreCase(dtstype) 
         		|| "业务规则".equalsIgnoreCase(dtstype)
+        		|| "单据表体".equalsIgnoreCase(dtstype)
+        		|| "单据表头".equalsIgnoreCase(dtstype)
                 ) {
         	//判断是否要加actived字段
             if("业务规则".equalsIgnoreCase(dtstype)){
