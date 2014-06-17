@@ -1,0 +1,7 @@
+@echo off
+setLocal EnableDelayedExpansion
+set CLASSPATH=%CLASSPATH%
+for /R ./lib/ %%a in (*.jar) do (
+set CLASSPATH=!CLASSPATH!;%%a
+)
+java -jar @MAINJAR@

@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<tables>
+		<table name="gmbusinessserach" version="1.11">
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="bsclassid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isdata" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="bsname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="serachfield" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="bstargetname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="bstargetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="bstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="issearch" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodelbindproject" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="projectid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsparameterfield" version="1.11">
+			<field name="columnname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columntype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsproject" version="1.11">
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="projectname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="projectid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectpara" version="1.11">
+			<field name="paramname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="projectid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="ismust" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="num" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstep" version="1.11">
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="orderid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="projectid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="storedts" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="islist" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isactived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="systemid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="classname" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="ispublic" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstepcolumnfield" version="1.11">
+			<field name="columnfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="columntype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="decimalsize" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="isencryption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstepdatasetsql" version="1.11">
+			<field name="databasetype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstepdatastore" version="1.11">
+			<field name="fieldname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldcaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="profilefield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="tablename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iskey" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dateformat" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="notsave" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datarevolvefield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstepdefined" version="1.11">
+			<field name="jndiname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sqltablename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasettype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datarevolve" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="ispublic" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="classpath" type="varchar" length="4000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsprojectstepparams" version="1.11">
+			<field name="paramtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="ismust" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stepname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="num" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccont" version="1.11">
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccontcol" version="1.11">
+			<field name="formula" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="formulaback" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="matchingcol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="direction" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isperiodidcol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="isnoneg" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="formulawhere" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccontdim" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="orderstr" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmacconttype" version="1.11">
+			<field name="accounttype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="activeclassname" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="runclassname" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccountbackcol" version="1.11">
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="detailcol" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="direction" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="timecol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="timewhere" type="varchar" length="150" isnull="1" iskey="0" version="1.11"/>
+			<field name="timefieldname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isperiod" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="periodfieldname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="periodbyzero" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccountbackformula" version="1.11">
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="timecol" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="detailcol" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmaccountbacksql" version="1.11">
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmaccountssave" version="1.11">
+			<field name="issave" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmasterlinkset" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="linkmastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="linkfields" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbatchgroup" version="1.11">
+			<field name="batchtype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="batchgroup" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="batchno" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbatchprop" version="1.11">
+			<field name="batchtype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="batchgroup" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="batchprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldno" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="viewplugtype" type="varchar" length="255" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbatchtype" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="batchtype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbsrelation" version="1.11">
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="bsrelationname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="itemname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbsrelationbind" version="1.11">
+			<field name="bsrelationname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="itemname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="selectstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="insertstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="updatestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="direction" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="finddoccodestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="parentformid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbsrelationbindcondition" version="1.11">
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="bsrelationname" type="varchar" length="100" isnull="0" iskey="1" version="1.11"/>
+			<field name="value" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="rightparse" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="fieldcaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="leftparse" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="temid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="logic" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="connectchar" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbsrelationbinddim" version="1.11">
+			<field name="bsrelationname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="frontmastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbsrelationdim" version="1.11">
+			<field name="bsrelationname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmbsrulestree" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbusinessgroup" version="1.11">
+			<field name="bsname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="bsgroupname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbusinessgrouptree" version="1.11">
+			<field name="bsname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="bsgroupname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmbusinessprop" version="1.11">
+			<field name="bsname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isshow" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iscollect" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="columnwidth" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmbusinessshare" version="1.11">
+			<field name="sharecode" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmbusinesssharetype" version="1.11">
+			<field name="sharecode" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmbusinesstype" version="1.11">
+			<field name="businesstype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmdatareference" version="1.11">
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="name" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="opentype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasourcetype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasourcename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramcaption" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="returncaption" type="varchar" length="150" isnull="1" iskey="0" version="1.11"/>
+			<field name="fieldparam" type="varchar" length="12000" isnull="1" iskey="0" version="1.11"/>
+			<field name="fieldreturn" type="varchar" length="12000" isnull="1" iskey="0" version="1.11"/>
+			<field name="operation" type="varchar" length="12000" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasourcecaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="openclass" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="serachfields" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="bsname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="bsgroupname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="casetype" type="varchar" length="255" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdataset" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasettypebusi" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasettype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sqltablename" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="status" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datarevolve" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetdim" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="used" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetdts" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="filter" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="dtsdeal" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetdtsdim" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimgroup" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="dimgroupprop" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="used" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetfield" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="caption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="fieldname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="control" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetfollowdim" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="dimgroup" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="followdimprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmdatasetfollowprop" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="dimgroup" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propfield" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetrevolvesql" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="4000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatasetsql" version="1.11">
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="databasetype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="top" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="orderby" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="groupby" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="isnew" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatastore" version="1.11">
+			<field name="isdataset" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldcaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="fieldname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="profilefield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="tablename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iskey" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datarevolvefield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="notsave" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dateformat" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="indexfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdatatype" version="1.11">
+			<field name="datatype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="size" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="mssqlstr" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mysqlstr" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="h2str" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="oraclestr" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="db2str" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propdatafield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="reportdatatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="notspace" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdimgroup" version="1.11">
+			<field name="dimgroup" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdimlink" version="1.11">
+			<field name="dimgroup" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimno" type="integer" length="10" isnull="0" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="lowsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="upsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtscol" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnfield" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="columntype" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="decimalsize" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isencryption" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="mtype" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtsdim" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimno" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dimname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="dimprop" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtsfollowprop" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dimname" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propfield" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtssql" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="databasetype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="top" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="orderby" type="varchar" length="5000" isnull="1" iskey="0" version="1.11"/>
+			<field name="groupby" type="varchar" length="5000" isnull="1" iskey="0" version="1.11"/>
+			<field name="isnew" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtstablecolumn" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iskey" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="ismain" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="listshow" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="listlength" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="viewplugtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="notsave" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dateformat" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="defaultvalue" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="mtype" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtstype" version="1.11">
+			<field name="id" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dtstype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="storagetype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtstypemaster" version="1.11">
+			<field name="dtstype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmdtsview" version="1.11">
+			<field name="columnid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="listlength" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="viewplugtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="listshow" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="ismust" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isreadonly" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="defaultvalue" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="dateformat" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmfifobacksql" version="1.11">
+			<field name="sqlstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="type" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmfifoset" version="1.11">
+			<field name="updatesql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="selectsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="insertsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="direction" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsitem" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmformaccount" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="selectstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="getdocdatestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="getperiodstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmformaccountcol" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="accountscol" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="formcol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="insertsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmformaccountdim" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="accountscol" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="accountsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="accountsdimcol" type="varchar" length="80" isnull="0" iskey="1" version="1.11"/>
+			<field name="formdimcol" type="varchar" length="80" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmformeliminations" version="1.11">
+			<field name="formid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="isvalue" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iscopy" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmformparam" version="1.11">
+			<field name="formid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="paramname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmaster" version="1.11">
+			<field name="mastertype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastertablename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="masterprop" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="masterpropname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="ispropclass" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isgroupmodify" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="grouppropmaster" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isdefault" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="status" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="islog" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isoutside" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="istree" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="childcount" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="modifyname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="modifydate" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="issend" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmaster_ddlsql" version="1.11">
+			<field name="databasetype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="mastersql" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="propsql" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="treesql" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+			<field name="deletesql" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmastercheck" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="classname" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="aftersave" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmasterpgroup" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propgroupid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="propgroupname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmasterprop" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propclassid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propgroupid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="keyinput" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="propvaluenum" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="spcodeprop" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmastertablecolumn" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mainprop" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propgroupid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propclassid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="viewsize" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="viewplugtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="keyinput" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="iskey" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmasterview" version="1.11">
+			<field name="mastername" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="viewsize" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="viewplugtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="no" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="ismust" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isreadonly" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="listshow" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmdlcolumn" version="1.11">
+			<field name="id" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="entityid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="columncaption" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="datatypeid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmdldts" version="1.11">
+			<field name="dtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="dtstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="physicaltable" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="periodtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="islog" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="issend" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmdldts_ddlsql" version="1.11">
+			<field name="databasetype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="createstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="notnullstr" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="nullstr" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="keystr" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastercreatestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="masterdeletestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastertreestr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="addfieldstr" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="delfieldstr" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="modifyfieldstr" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="addpkstr" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="delpkstr" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmdlentity" version="1.11">
+			<field name="entityid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="entitycaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="keyfields" type="varchar" length="150" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmdlentitylink" version="1.11">
+			<field name="entityid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="linkentityid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="columnid" type="varchar" length="150" isnull="1" iskey="0" version="1.11"/>
+			<field name="linkcolumnid" type="varchar" length="150" isnull="1" iskey="0" version="1.11"/>
+			<field name="updatecontrol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="deletecontrol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="deletesql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="updatesql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodel" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="modelname" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="modeltype" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="classname" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="saveclassname" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="actived" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="saveproject" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodelbatch" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="batchtype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="sqlstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="batchstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="batchpropstr" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodelcdt" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="termid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="connectchar" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="leftparse" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="fieldcaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="logicsymbol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="paramcaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="rightparse" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="wheresql" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodeldataset" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="datasetname" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="fdatasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="fdatasetname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="masterdatasetid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="masterfields" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="detailfields" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="wheresql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="mysqlwheresql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="mssqlwheresql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="mastercaptions" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="detailcaptions" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="oraclewheresql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodelparam" version="1.11">
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="paramid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="paramcaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="notnull" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="size" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodeltype" version="1.11">
+			<field name="modeltype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+		</table>
+		<table name="gmpgroup" version="1.11">
+			<field name="propgroupid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="propgroupname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmprop" version="1.11">
+			<field name="proptype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="propfield" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="size" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="storaged" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="tablename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="businesstype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="sharecode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="istree" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="isvalue" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="status" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isdefault" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="oldflag" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmpropvalue" version="1.11">
+			<field name="id" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="floatvalue" type="real" length="7" isnull="1" iskey="0" version="1.11"/>
+			<field name="varcharvalue" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmpropvaluetree" version="1.11">
+			<field name="propname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="supid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="id" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="distance" type="integer" length="10" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmviewplugtype" version="1.11">
+			<field name="viewplugtype" type="varchar" length="60" isnull="0" iskey="1" version="1.11"/>
+			<field name="viewplugcaption" type="varchar" length="60" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsdatabaserunsql" version="1.11">
+			<field name="datatype" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="curno" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="runbeforesql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsdocstate" version="1.11">
+			<field name="bzsystemid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="state" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="doccondition" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="docstateflag" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="defaultvalue" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsdoctype" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="iscompanyid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="isdatetime" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="datetimeformate" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="codeflag" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="includeopid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="codelength" type="integer" length="10" isnull="0" iskey="0" version="1.11"/>
+			<field name="curcode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="spelldoccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="periodtype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="periodorgfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="isreset" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="iskey1" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsform" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="formname" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="formmemo" type="varchar" length="200" isnull="1" iskey="0" version="1.11"/>
+			<field name="dataformid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="predocstatus" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="docstatus" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+			<field name="defaultprinttemplate" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="resourcetype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="resourcename" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="resourcetree" type="varchar" length="100" isnull="1" iskey="0" version="1.11"/>
+			<field name="maxprintcount" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="saveproject" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsformmodellay" version="1.11">
+			<field name="formid" type="integer" length="10" isnull="0" iskey="1" version="1.11"/>
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="layoutid" type="integer" length="10" isnull="0" iskey="0" version="1.11"/>
+			<field name="stamp" type="timestamp" length="23" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gsysdatadict" version="1.11">
+			<field name="sysdatadictid" type="varchar" length="50" isnull="0" iskey="0" version="1.11"/>
+			<field name="sysdatadictname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="datatype" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="mnemoniccode" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gxsystemparam" version="1.11">
+			<field name="paramname" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="memo" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="gmmodeldatasetdetail" version="1.11">
+			<field name="cgcolumnid" type="varchar" length="5000" isnull="1" iskey="0" version="1.11"/>
+			<field name="cgcolumnlist" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="cgdtsid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="cgsumcol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="changesql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="columnid" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="copycgfields" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+			<field name="copymodelfields" type="varchar" length="150" isnull="1" iskey="0" version="1.11"/>
+			<field name="datasetid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="keycgfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="keyshowfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="modelid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="modelsumcol" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="modelsumcolname" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="parameterfield" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="showcaption" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="showcolumnlist" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="showsql" type="varchar" length="500" isnull="1" iskey="0" version="1.11"/>
+		</table>
+		<table name="userstoryprocedure" version="1.11">
+			<field name="procedureguid" type="varchar" length="50" isnull="0" iskey="1" version="1.11"/>
+			<field name="procedureparams" type="varchar" length="2000" isnull="1" iskey="0" version="1.11"/>
+			<field name="userstoryverid" type="integer" length="10" isnull="1" iskey="0" version="1.11"/>
+			<field name="procedurename" type="varchar" length="50" isnull="1" iskey="0" version="1.11"/>
+			<field name="proceduretext" type="varchar" length="8000" isnull="1" iskey="0" version="1.11"/>
+		</table>
+	</tables>
+	<data>
+		<!--gmdatatype-->
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='整型'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '整型', 0, 'int', 'int', 'int', 'integer', 'int', 'floatvalue', '1', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='GUID'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( 'GUID', 50, 'varchar(50)', 'varchar(50)', 'varchar(50)', 'varchar2(50)', 'varchar(50)', 'varcharvalue', '11', '', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='长字符'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '长字符', 200, 'varchar(500)', 'varchar(500)', 'varchar(500)', 'varchar2(500)', 'varchar(500)', 'varcharvalue', '11', '', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='金额'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '金额', 0, 'money', 'float', 'decimal', 'float', 'float', 'floatvalue', '5', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='超长字符'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '超长字符', 8000, 'varchar(8000)', 'varchar(8000)', 'varchar(8000)', 'varchar2(4000)', 'varchar(8000)', 'varcharvalue', '11', NULL, '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='短字符'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '短字符', 20, 'varchar(20)', 'varchar(20)', 'varchar(20)', 'varchar2(20)', 'varchar(20)', 'varcharvalue', '11', NULL, '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='浮点型'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '浮点型', 0, 'float', 'float', 'float', 'float', 'float', 'floatvalue', '5', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='日期'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '日期', 0, 'datetime', 'datetime', 'datetime', 'date', 'date', 'datevalue', '10', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='字符'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '字符', 50, 'varchar(50)', 'varchar(50)', 'varchar(50)', 'varchar2(50)', 'varchar(50)', 'varcharvalue', '11', '', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='中字符'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( '中字符', 150, 'varchar(150)', 'varchar(150)', 'varchar(150)', 'varchar2(150)', 'varchar(150)', 'varcharvalue', '11', '', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='longtext'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( 'longtext', 715827882, 'NTEXT', 'LONGTEXT', 'CLOB', 'LONG', 'long varchar', '', '11', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDATATYPE WHERE DATATYPE='blob'" insertsql="INSERT INTO GMDATATYPE ( DATATYPE, SIZE, MSSQLSTR, MYSQLSTR, H2STR, ORACLESTR, DB2STR, PROPDATAFIELD, REPORTDATATYPE, NOTSPACE, STAMP ) VALUES ( 'blob', 4000, 'blob', 'blob', 'blob', 'blob', 'blob', '', '62', '1', '2014-01-07 16:39:21' )" isencrypt="0" version="1.11"/>
+		<!--gmmaster_ddlsql-->
+		<row deletesql="REVMRVRFIEZST00gR01NQVNURVJfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nbXNzcWwn" insertsql="SU5TRVJUIElOVE8gR01NQVNURVJfRERMU1FMICgKCURBVEFCQVNFVFlQRSwKCU1BU1RFUlNRTCwKCVBST1BTUUwsCglUUkVFU1FMLAoJREVMRVRFU1FMCikKVkFMVUVTCgkoCgkJJ21zc3FsJywKCQknQ1JFQVRFIFRBQkxFIFtkYm9dLlsmVGFibGVOYW1lJl0oCglbbWFzdGVydmFsdWVdICZtYXN0ZXJ2YWx1ZURhdGFUeXBlJiBOT1QgTlVMTCwKCVttYXN0ZXJjYXB0aW9uXSAmbWFzdGVyY2FwdGlvbkRhdGFUeXBlJiBOVUxMLAoJW1BhcmVudElEXSBbdmFyY2hhcl0oNTApIENPTExBVEUgQ2hpbmVzZV9QUkNfQ0lfQVMgTlVMTCBDT05TVFJBSU5UIFtERl8mVGFibGVOYW1lJl9QYXJlbnRJRF0gIERFRkFVTFQgKCgwKSksCglbSURdIFt2YXJjaGFyXSg1MCkgQ09MTEFURSBDaGluZXNlX1BSQ19DSV9BUyBOT1QgTlVMTCwKCVtwcm9wZ3JvdXBpZF0gW3ZhcmNoYXJdKDUwKSBDT0xMQVRFIENoaW5lc2VfUFJDX0NJX0FTIE5VTEwgQ09OU1RSQUlOVCBbREZfJlRhYmxlTmFtZSZfcHJvcGdyb3VwaWRdICBERUZBVUxUICgoMSkpLAoJW3Byb3BjbGFzc2lkXSBbdmFyY2hhcl0oNTApIENPTExBVEUgQ2hpbmVzZV9QUkNfQ0lfQVMgTlVMTCBDT05TVFJBSU5UIFtERl8mVGFibGVOYW1lJl9wcm9wY2xhc3NpZF0gIERFRkFVTFQgKCgxKSksCglbYWN0aXZlZF0gW2ludF0gTlVMTCwKCVtlZGl0bWFuXSBbdmFyY2hhcl0oNTApIE5VTEwsCglbZWRpdGRhdGVdIFtkYXRldGltZV0gTlVMTCwKIENPTlNUUkFJTlQgW1BLXyZUYWJsZU5hbWUmXSBQUklNQVJZIEtFWSAgCigKCVttYXN0ZXJ2YWx1ZV0KKQopIE9OIFtQUklNQVJZXScsCgkJJ0NSRUFURSBUQUJMRSBbZGJvXS5bJlRhYmxlTmFtZSZfcHJvcF0oCglbaWRdIFt2YXJjaGFyXSg1MCkgTk9UIE5VTEwsCglbcHJvcGdyb3VwaWRdIFt2YXJjaGFyXSg1MCkgQ09MTEFURSBDaGluZXNlX1BSQ19DSV9BUyBOVUxMIENPTlNUUkFJTlQgW0RGXyZUYWJsZU5hbWUmX3Byb3BfcHJvcGdyb3VwaWRdICBERUZBVUxUICgoMSkpLAoJW3Byb3BjbGFzc2lkXSBbdmFyY2hhcl0oNTApIENPTExBVEUgQ2hpbmVzZV9QUkNfQ0lfQVMgTlVMTCBDT05TVFJBSU5UIFtERl8mVGFibGVOYW1lJl9wcm9wX3Byb3BjbGFzc2lkXSAgREVGQVVMVCAoKDEpKSwKCVtwcm9wbmFtZV0gW3ZhcmNoYXJdKDUwKSBOT1QgTlVMTCwKCVtmbG9hdHZhbHVlXSBbZmxvYXRdIE5VTEwsCglbdmFyY2hhcnZhbHVlXSBbdmFyY2hhcl0oNTAwKSBDT0xMQVRFIENoaW5lc2VfUFJDX0NJX0FTIE5VTEwsCglbZGF0ZXZhbHVlXSBbZGF0ZXRpbWVdIE5VTEwsCiBDT05TVFJBSU5UIFtQS18mVGFibGVOYW1lJl9wcm9wXSBQUklNQVJZIEtFWSAKKAoJW2lkXSwKCVtwcm9wbmFtZV0KKQopIE9OIFtQUklNQVJZXScsCgkJJ0NSRUFURSBUQUJMRSBbZGJvXS5bJlRhYmxlTmFtZSZfdHJlZV0oCglbc3VwaWRdIFt2YXJjaGFyXSg1MCkgTk9UIE5VTEwsCglbaWRdIFt2YXJjaGFyXSg1MCkgTk9UIE5VTEwsCglbZGlzdGluY2VdIFtpbnRdIE5VTEwsCiBDT05TVFJBSU5UIFtQS18mVGFibGVOYW1lJl90cmVlXSBQUklNQVJZIEtFWSAKKAoJW3N1cGlkXSwKCVtpZF0KKQopIE9OIFtQUklNQVJZXScsCgkJJ0NSRUFURSBUQUJMRSBbZGJvXS5bJlRhYmxlTmFtZSZfZGVsZXRlXSgKCVtpZF0gIFt2YXJjaGFyXSg1MCkgTk9UIE5VTEwsCglbbWFzdGVydmFsdWVdICZtYXN0ZXJ2YWx1ZURhdGFUeXBlJiBOT1QgTlVMTCwKCVtlZGl0bWFuXSBbdmFyY2hhcl0oNTApIE5VTEwsCglbZWRpdGRhdGVdIFtkYXRldGltZV0gTlVMTCwKIENPTlNUUkFJTlQgW1BLXyZUYWJsZU5hbWUmX2RlbGV0ZV0gUFJJTUFSWSBLRVkgCigKCVtpZF0KKQopIE9OIFtQUklNQVJZXScKCSk=" isencrypt="1" version="1.11"/>
+		<row deletesql="REVMRVRFIEZST00gR01NQVNURVJfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nbXlzcWwn" insertsql="SU5TRVJUIElOVE8gR01NQVNURVJfRERMU1FMCihEQVRBQkFTRVRZUEUsIE1BU1RFUlNRTCwgUFJPUFNRTCwgVFJFRVNRTCwgREVMRVRFU1FMKQpWQUxVRVMoJ215c3FsJywgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJigKICBtYXN0ZXJ2YWx1ZSAmbWFzdGVydmFsdWVEYXRhVHlwZSYgTk9UIE5VTEwgZGVmYXVsdCAnJycnLAogIG1hc3RlcmNhcHRpb24gJm1hc3RlcmNhcHRpb25EYXRhVHlwZSYgTlVMTCBkZWZhdWx0ICcnJycsCiAgUGFyZW50SUQgdmFyY2hhcig1MCkgZGVmYXVsdCAnJycnLAogIElEIHZhcmNoYXIoMTAwKSBOT1QgTlVMTCAsCiAgcHJvcGdyb3VwaWQgdmFyY2hhcig1MCkgZGVmYXVsdCAnJzEnJywKCXByb3BjbGFzc2lkIHZhcmNoYXIoNTApIGRlZmF1bHQgJycxJycsCglhY3RpdmVkIElOVEVHRVIgTlVMTCwKCWVkaXRtYW4gdmFyY2hhcig1MCkgTlVMTCwKCWVkaXRkYXRlIGRhdGV0aW1lIE5VTEwsCiAgUFJJTUFSWSBLRVkgIChtYXN0ZXJ2YWx1ZSkKKSBFTkdJTkU9SW5ub0RCIERFRkFVTFQgQ0hBUlNFVD11dGY4JywgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJl9wcm9wKAogaWQgdmFyY2hhcig1MCkgTk9UIE5VTEwsCglwcm9wZ3JvdXBpZCB2YXJjaGFyKDUwKSAgIGRlZmF1bHQgJycxJycsCglwcm9wY2xhc3NpZCB2YXJjaGFyKDUwKSAgIGRlZmF1bHQgJycxJycsCglwcm9wbmFtZSB2YXJjaGFyKDUwKSAgTk9UIE5VTEwsCglmbG9hdHZhbHVlIGZsb2F0ICwKCXZhcmNoYXJ2YWx1ZSB2YXJjaGFyKDUwMCkgICwKCWRhdGV2YWx1ZSBkYXRldGltZSAsCiAgUFJJTUFSWSBLRVkgIChpZCxwcm9wbmFtZSkKKSBFTkdJTkU9SW5ub0RCIERFRkFVTFQgQ0hBUlNFVD11dGY4JywgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJl90cmVlKAogc3VwaWQgdmFyY2hhcig1MCkgTk9UIE5VTEwsCglpZCB2YXJjaGFyKDUwKSAgTk9UIE5VTEwsCglkaXN0aW5jZSBpbnQgTlVMTCwKICBQUklNQVJZIEtFWSAgKHN1cGlkLGlkKQopIEVOR0lORT1Jbm5vREIgREVGQVVMVCBDSEFSU0VUPXV0ZjgnLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmX2RlbGV0ZSgKICBpZCAgdmFyY2hhcig1MCkgTk9UIE5VTEwsCgltYXN0ZXJ2YWx1ZSAmbWFzdGVydmFsdWVEYXRhVHlwZSYgTk9UIE5VTEwsCgllZGl0bWFuIHZhcmNoYXIoNTApIE5VTEwsCgllZGl0ZGF0ZSBkYXRldGltZSBOVUxMLAogIFBSSU1BUlkgS0VZICAoaWQpCikgRU5HSU5FPUlubm9EQiBERUZBVUxUIENIQVJTRVQ9dXRmOCcp" isencrypt="1" version="1.11"/>
+		<row deletesql="REVMRVRFIEZST00gR01NQVNURVJfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nb3JhY2xlJw==" insertsql="SU5TRVJUIElOVE8gR01NQVNURVJfRERMU1FMICggREFUQUJBU0VUWVBFLCBNQVNURVJTUUwsIFBST1BTUUwsIFRSRUVTUUwsIERFTEVURVNRTCApIFZBTFVFUyAoICdvcmFjbGUnLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmKAoJbWFzdGVydmFsdWUgJm1hc3RlcnZhbHVlRGF0YVR5cGUmIE5PVCBOVUxMLAoJbWFzdGVyY2FwdGlvbiAmbWFzdGVyY2FwdGlvbkRhdGFUeXBlJiBOVUxMLAoJUGFyZW50SUQgVkFSQ0hBUjIoNTApICAgZGVmYXVsdCAwIE5VTEwsCglJRCBWQVJDSEFSMig1MCkgTk9UIE5VTEwsCglwcm9wZ3JvdXBpZCBWQVJDSEFSMig1MCkgZGVmYXVsdCAnJzEnJywKCXByb3BjbGFzc2lkIFZBUkNIQVIyKDUwKSBkZWZhdWx0ICcnMScnLAoJYWN0aXZlZCBJTlRFR0VSIE5VTEwsCgllZGl0bWFuIFZBUkNIQVIyKDUwKSBOVUxMLAoJZWRpdGRhdGUgREFURSBOVUxMLAoJY29uc3RyYWludCAgUEtfJlRhYmxlTmFtZSYgIHByaW1hcnkga2V5KG1hc3RlcnZhbHVlKQopJywgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJl9wcm9wKAoJaWQgVkFSQ0hBUjIoNTApIE5PVCBOVUxMLAoJcHJvcGdyb3VwaWQgVkFSQ0hBUjIoNTApICBkZWZhdWx0ICcnMScnIE5VTEwsCglwcm9wY2xhc3NpZCBWQVJDSEFSMig1MCkgIGRlZmF1bHQgJycxJycgTlVMTCwKCXByb3BuYW1lIFZBUkNIQVIyKDUwKSBOT1QgTlVMTCwKCWZsb2F0dmFsdWUgZmxvYXQgTlVMTCwKCXZhcmNoYXJ2YWx1ZSBWQVJDSEFSMig1MDApLAoJZGF0ZXZhbHVlIERBVEUgTlVMTCwKCWNvbnN0cmFpbnQgIFBLXyZUYWJsZU5hbWUmX3Byb3AgIHByaW1hcnkga2V5KGlkLHByb3BuYW1lKQopJywgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJl90cmVlKAoJc3VwaWQgVkFSQ0hBUjIoNTApIE5PVCBOVUxMLAoJaWQgVkFSQ0hBUjIoNTApIE5PVCBOVUxMLAoJZGlzdGluY2UgSU5URUdFUiBOVUxMLAoJY29uc3RyYWludCAgUEtfJlRhYmxlTmFtZSZfdHJlZSAgcHJpbWFyeSBrZXkoc3VwaWQsaWQpCiknLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmX2RlbGV0ZSgKCWlkICBWQVJDSEFSMig1MCkgTk9UIE5VTEwsCgltYXN0ZXJ2YWx1ZSAmbWFzdGVydmFsdWVEYXRhVHlwZSYgTk9UIE5VTEwsCgllZGl0bWFuIFZBUkNIQVIyKDUwKSBOVUxMLAoJZWRpdGRhdGUgREFURSBOVUxMLAogIGNvbnN0cmFpbnQgIFBLXyZUYWJsZU5hbWUmX2RlbGV0ZSAgcHJpbWFyeSBrZXkoaWQpCiknICk=" isencrypt="1" version="1.11"/>
+		<!--gmmdldts_ddlsql-->
+		<row deletesql="REVMRVRFIEZST00gR01NRExEVFNfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nbXNzcWwn" insertsql="SU5TRVJUIElOVE8gR01NRExEVFNfRERMU1FMICgKCURBVEFCQVNFVFlQRSwKCUNSRUFURVNUUiwKCU5PVE5VTExTVFIsCglOVUxMU1RSLAoJS0VZU1RSLAoJTUFTVEVSQ1JFQVRFU1RSLAoJTUFTVEVSREVMRVRFU1RSLAoJTUFTVEVSVFJFRVNUUiwKCUFEREZJRUxEU1RSLAoJREVMRklFTERTVFIsCglNT0RJRllGSUVMRFNUUiwKCUFERFBLU1RSLAoJREVMUEtTVFIKKQpWQUxVRVMKCSgKCQknbXNzcWwnLAoJCSdDUkVBVEUgVEFCTEUgW2Rib10uWyZUYWJsZU5hbWUmXSgKCSZmaWVsZGxpc3QmLAogQ09OU1RSQUlOVCBbUEtfJlRhYmxlTmFtZSZdIFBSSU1BUlkgS0VZICAKKAoJJmtleUZpZWxkbGlzdCYKKQopIE9OIFtQUklNQVJZXScsCgkJJ05PVCBOVUxMJywKCQknTlVMTCcsCgkJJ2FzYycsCgkJJ0NSRUFURSBUQUJMRSBbZGJvXS5bJlRhYmxlTmFtZSZdICgKICBbUGFyZW50SURdIFt2YXJjaGFyXSg1MCkgQ09MTEFURSBDaGluZXNlX1BSQ19DSV9BUyBOVUxMIENPTlNUUkFJTlQgW0RGXyZUYWJsZU5hbWUmX1BhcmVudElEXSAgREVGQVVMVCAoKDApKSwKICBbSURdIFt2YXJjaGFyXSg1MCkgQ09MTEFURSBDaGluZXNlX1BSQ19DSV9BUyBOT1QgTlVMTCwKICBbYWN0aXZlZF0gW2ludF0gTlVMTCwKICBbZWRpdG1hbl0gW3ZhcmNoYXJdKDUwKSBOVUxMLAogIFtlZGl0ZGF0ZV0gW2RhdGV0aW1lXSBOVUxMLAogICZmaWVsZGxpc3QmLAogIENPTlNUUkFJTlQgW1BLXyZUYWJsZU5hbWUmXSBQUklNQVJZIEtFWSAgCigKCSZrZXlGaWVsZGxpc3QmCikKKSBPTiBbUFJJTUFSWV0nLAoJCSdDUkVBVEUgVEFCTEUgW2Rib10uWyZUYWJsZU5hbWUmX2RlbGV0ZV0oCglbaWRdICBbdmFyY2hhcl0oNTApIE5PVCBOVUxMLAoJW2VkaXRtYW5dICBbdmFyY2hhcl0oNTApIE5VTEwsCglbZWRpdGRhdGVdIFtkYXRldGltZV0gTlVMTCwKIENPTlNUUkFJTlQgW1BLXyZUYWJsZU5hbWUmX2RlbGV0ZV0gUFJJTUFSWSBLRVkgIAooCglbaWRdIAopCikgT04gW1BSSU1BUlldJywKCQknQ1JFQVRFIFRBQkxFIFtkYm9dLlsmVGFibGVOYW1lJl90cmVlXSgKCVtzdXBpZF0gW3ZhcmNoYXJdKDUwKSBDT0xMQVRFIENoaW5lc2VfUFJDX0NJX0FTIE5PVCBOVUxMLAoJW2lkXSBbdmFyY2hhcl0oNTApIENPTExBVEUgQ2hpbmVzZV9QUkNfQ0lfQVMgTk9UIE5VTEwsCglbZGlzdGluY2VdIFtpbnRdIE5VTEwsCiBDT05TVFJBSU5UIFtQS18mVGFibGVOYW1lJl90cmVlXSBQUklNQVJZIEtFWSBDTFVTVEVSRUQgCigKCVtzdXBpZF0gQVNDLAoJW2lkXSBBU0MKKVdJVEggKElHTk9SRV9EVVBfS0VZID0gT0ZGKSBPTiBbUFJJTUFSWV0KKSBPTiBbUFJJTUFSWV0nLAoJCSdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBBREQgJkZpZWxkTmFtZSYgJmRhdGFUeXBlJicsCgkJJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIERST1AgQ09MVU1OICZGaWVsZE5hbWUmICcsCgkJJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIEFMVEVSIENPTFVNTiAmRmllbGROYW1lJiAmZGF0YVR5cGUmICcsCgkJJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIEFERCBDT05TVFJBSU5UICZQS05hbWUmIFBSSU1BUlkgS0VZIENMVVNURVJFRCAoJkZpZWxkc05hbWUmKScsCgkJJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIERST1AgQ09OU1RSQUlOVCAmUEtOYW1lJicKCSk=" isencrypt="1" version="1.11"/>
+		<row deletesql="REVMRVRFIEZST00gR01NRExEVFNfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nbXlzcWwn" insertsql="SU5TRVJUIElOVE8gR01NRExEVFNfRERMU1FMICggREFUQUJBU0VUWVBFLCBDUkVBVEVTVFIsIE5PVE5VTExTVFIsIE5VTExTVFIsIEtFWVNUUiwgTUFTVEVSQ1JFQVRFU1RSLCBNQVNURVJERUxFVEVTVFIsIE1BU1RFUlRSRUVTVFIsIEFEREZJRUxEU1RSLCBERUxGSUVMRFNUUiwgTU9ESUZZRklFTERTVFIsIEFERFBLU1RSLCBERUxQS1NUUiApIFZBTFVFUyAoICdteXNxbCcsICdDUkVBVEUgVEFCTEUgYCZUYWJsZU5hbWUmYCAoCiAgJmZpZWxkbGlzdCYsCiAgUFJJTUFSWSBLRVkgICgma2V5RmllbGRsaXN0JikKKSBFTkdJTkU9SW5ub0RCIERFRkFVTFQgQ0hBUlNFVD11dGY4JywgJ05PVCBOVUxMJywgTlVMTCwgTlVMTCwgJ0NSRUFURSBUQUJMRSAmVGFibGVOYW1lJiAoCiAgUGFyZW50SUQgdmFyY2hhcig1MCkgIGRlZmF1bHQgMCBOVUxMLAogIElEIHZhcmNoYXIoNTApIE5PVCBOVUxMLAogIGFjdGl2ZWQgSU5URUdFUiBOVUxMLAoJZWRpdG1hbiB2YXJjaGFyKDUwKSBOVUxMLAogIGVkaXRkYXRlIGRhdGV0aW1lIE5VTEwsCiAgJmZpZWxkbGlzdCYsCglwcmltYXJ5IGtleSgma2V5RmllbGRsaXN0JikgCikgRU5HSU5FPUlubm9EQiBERUZBVUxUIENIQVJTRVQ9dXRmOCcsICdDUkVBVEUgVEFCTEUgJlRhYmxlTmFtZSZfZGVsZXRlKAoJaWQgIHZhcmNoYXIoNTApIE5PVCBOVUxMLAoJZWRpdG1hbiB2YXJjaGFyKDUwKSBOVUxMLAoJZWRpdGRhdGUgZGF0ZXRpbWUgTlVMTCwKICBwcmltYXJ5IGtleShpZCkgCikgRU5HSU5FPUlubm9EQiBERUZBVUxUIENIQVJTRVQ9dXRmOCcsICdDUkVBVEUgVEFCTEUgJlRhYmxlTmFtZSZfdHJlZSgKCXN1cGlkIHZhcmNoYXIoNTApIE5PVCBOVUxMLAoJaWQgdmFyY2hhcig1MCkgTk9UIE5VTEwsCglkaXN0aW5jZSBJTlRFR0VSIE5VTEwsCiAgcHJpbWFyeSBrZXkoc3VwaWQsaWQpIAopIEVOR0lORT1Jbm5vREIgREVGQVVMVCBDSEFSU0VUPXV0ZjgnLCAnQUxURVIgVEFCTEUgJlRhYmxlTmFtZSYgQUREICZGaWVsZE5hbWUmICZkYXRhVHlwZSYnLCAnQUxURVIgVEFCTEUgJlRhYmxlTmFtZSYgRFJPUCBDT0xVTU4gJkZpZWxkTmFtZSYgJywgJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIE1PRElGWSBDT0xVTU4gJkZpZWxkTmFtZSYgJmRhdGFUeXBlJicsICdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBBREQgUFJJTUFSWSBLRVkoJkZpZWxkc05hbWUmKScsICdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBEUk9QIFBSSU1BUlkgS0VZJyAp" isencrypt="1" version="1.11"/>
+		<row deletesql="REVMRVRFIEZST00gR01NRExEVFNfRERMU1FMIFdIRVJFIERBVEFCQVNFVFlQRT0nb3JhY2xlJw==" insertsql="SU5TRVJUIElOVE8gR01NRExEVFNfRERMU1FMICggREFUQUJBU0VUWVBFLCBDUkVBVEVTVFIsIE5PVE5VTExTVFIsIE5VTExTVFIsIEtFWVNUUiwgTUFTVEVSQ1JFQVRFU1RSLCBNQVNURVJERUxFVEVTVFIsIE1BU1RFUlRSRUVTVFIsIEFEREZJRUxEU1RSLCBERUxGSUVMRFNUUiwgTU9ESUZZRklFTERTVFIsIEFERFBLU1RSLCBERUxQS1NUUiApIFZBTFVFUyAoICdvcmFjbGUnLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmKAoJJmZpZWxkbGlzdCYsCgljb25zdHJhaW50ICBQS18mVGFibGVOYW1lJiAgcHJpbWFyeSBrZXkoJmtleUZpZWxkbGlzdCYpIAopCicsICdOT1QgIE5VTEwnLCBOVUxMLCBOVUxMLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmICgKICBQYXJlbnRJRCBWQVJDSEFSMig1MCkgIGRlZmF1bHQgMCBOVUxMLAogIElEIFZBUkNIQVIyKDUwKSBOT1QgTlVMTCwKICBhY3RpdmVkIElOVEVHRVIgTlVMTCwKCWVkaXRtYW4gVkFSQ0hBUjIoNTApIE5VTEwsCiAgZWRpdGRhdGUgREFURSBOVUxMLAogICZmaWVsZGxpc3QmLAoJY29uc3RyYWludCAgUEtfJlRhYmxlTmFtZSYgIHByaW1hcnkga2V5KCZrZXlGaWVsZGxpc3QmKSAKKScsICdDUkVBVEUgVEFCTEUgJlRhYmxlTmFtZSZfZGVsZXRlKAoJaWQgIFZBUkNIQVIyKDUwKSBOT1QgTlVMTCwKCWVkaXRtYW4gVkFSQ0hBUjIoNTApIE5VTEwsCgllZGl0ZGF0ZSBEQVRFIE5VTEwsCiAgY29uc3RyYWludCAgUEtfJlRhYmxlTmFtZSZfZGVsZXRlICBwcmltYXJ5IGtleShpZCkgCiknLCAnQ1JFQVRFIFRBQkxFICZUYWJsZU5hbWUmX3RyZWUoCglzdXBpZCB2YXJjaGFyMig1MCkgTk9UIE5VTEwsCglpZCB2YXJjaGFyMig1MCkgTk9UIE5VTEwsCglkaXN0aW5jZSBJTlRFR0VSIE5VTEwsCiAgY29uc3RyYWludCAgUEtfJlRhYmxlTmFtZSZfdHJlZSAgcHJpbWFyeSBrZXkoc3VwaWQsaWQpIAopJywgJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIEFERCAmRmllbGROYW1lJiAmZGF0YVR5cGUmJywgJ0FMVEVSIFRBQkxFICZUYWJsZU5hbWUmIERST1AgQ09MVU1OICZGaWVsZE5hbWUmICcsICdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBNT0RJRlkgJkZpZWxkTmFtZSYgJmRhdGFUeXBlJicsICdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBBREQgUFJJTUFSWSBLRVkoJkZpZWxkc05hbWUmKScsICdBTFRFUiBUQUJMRSAmVGFibGVOYW1lJiBEUk9QIFBSSU1BUlkgS0VZJyAp" isencrypt="1" version="1.11"/>
+		<!--GMDTSTYPE-->
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='业务规则'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( NULL, '业务规则', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='单据表头'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 1, '单据表头', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='单据表体'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 2, '单据表体', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='常规数据源'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 3, '常规数据源', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='常规数据源(纵)'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 4, '常规数据源(纵)', '纵向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='外部数据'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 5, '外部数据', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='自定义数据'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 6, '自定义数据', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='明细账'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 7, '明细账', '纵向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='即时账'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 8, '即时账', '纵向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='期间账'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 9, '期间账', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='业务关联'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 10, '业务关联', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='特殊明细账'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 11, '特殊明细账', '纵向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMDTSTYPE WHERE DTSTYPE='先进先出明细账'" insertsql="INSERT INTO GMDTSTYPE ( ID, DTSTYPE, STORAGETYPE, STAMP ) VALUES ( 12, '先进先出明细账', '横向', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<!--GMPROP-->
+		<row deletesql="DELETE FROM gmprop where propname = '字段类型'" insertsql="INSERT INTO GMPROP ( PROPTYPE, PROPNAME, PROPFIELD, DATATYPE, SIZE, STORAGED, TABLENAME, BUSINESSTYPE, SHARECODE, ISTREE, MEMO, ISVALUE, STATUS, ISDEFAULT, STAMP, MNEMONICCODE, OLDFLAG ) VALUES ( '公共属性', '字段类型', 'datatype', '字符', NULL, NULL, '', '系统', NULL, NULL, '', 1, 1, NULL, '2014-01-07 16:39:21', 'ZDLX', 1 )" isencrypt="0" version="1.11"/>
+		<!--GMPROPVALUE-->
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型'" insertsql="" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='10'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 10, '字段类型', NULL, '字符', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='20'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 20, '字段类型', NULL, '中字符', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='30'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 30, '字段类型', NULL, '长字符', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='40'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 40, '字段类型', NULL, '超长字符', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='50'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 50, '字段类型', NULL, '整型', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='60'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 60, '字段类型', NULL, '日期', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='70'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 70, '字段类型', NULL, '金额', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='80'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 80, '字段类型', NULL, 'blob', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='90'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 90, '字段类型', NULL, 'longtext', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='字段类型' AND ID='100'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 100, '字段类型', NULL, 'GUID', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		
+		<row deletesql="DELETE FROM gmprop where propname = '数据库类型'" insertsql="INSERT INTO GMPROP ( PROPTYPE, PROPNAME, PROPFIELD, DATATYPE, SIZE, STORAGED, TABLENAME, BUSINESSTYPE, SHARECODE, ISTREE, MEMO, ISVALUE, STATUS, ISDEFAULT, STAMP, MNEMONICCODE, OLDFLAG ) VALUES ( '公共属性', '数据库类型', 'databasetype', '字符', NULL, NULL, '', '系统', NULL, NULL, '', 1, 1, NULL, '2014-01-07 16:39:21', 'SJKLX', 1 )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='mysql'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 10, '数据库类型', NULL, 'mysql', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='mssql'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 20, '数据库类型', NULL, 'mssql', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='sql92'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 30, '数据库类型', NULL, 'sql92', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='oracle'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 40, '数据库类型', NULL, 'oracle', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='postgresql'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 50, '数据库类型', NULL, 'postgresql', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='sybase'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 60, '数据库类型', NULL, 'sybase', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='odbc'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 70, '数据库类型', NULL, 'odbc', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='db2'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 80, '数据库类型', NULL, 'db2', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM GMPROPVALUE WHERE PROPNAME='数据库类型' AND VARCHARVALUE='informix'" insertsql="INSERT INTO GMPROPVALUE ( ID, PROPNAME, FLOATVALUE, VARCHARVALUE, STAMP ) VALUES ( 90, '数据库类型', NULL, 'informix', '2014-01-07 16:39:20' )" isencrypt="0" version="1.11"/>
+		
+		<!--gmdtstypemaster-->
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '业务关联' AND mastername = '业务关联'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('业务关联', '业务关联', '2014-03-18 11:25:55')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '先进先出明细账' AND mastername = '先进先出引用'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('先进先出明细账', '先进先出引用', '2014-03-18 11:26:01')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '先进先出明细账' AND mastername = '先进先出明细账'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('先进先出明细账', '先进先出明细账', '2014-03-18 11:26:06')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '单据表体' AND mastername = '单据明细'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('单据表体', '单据明细', '2014-03-18 11:26:10')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '单据表头' AND mastername = '单据表头'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('单据表头', '单据表头', '2014-03-18 11:26:14')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '子账明细账' AND mastername = '明细账'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('子账明细账', '明细账', '2014-03-18 11:38:04')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '明细账' AND mastername = '明细账'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('明细账', '明细账', '2014-03-18 11:38:07')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmdtstypemaster WHERE DTStype = '特殊明细账' AND mastername = '特殊明细账'" insertsql="INSERT INTO gmdtstypemaster (DTStype, mastername, stamp) VALUES ('特殊明细账', '特殊明细账', '2014-03-18 11:38:12')" isencrypt="0" version="1.11"/>
+		
+		<!--gmmodeltype-->
+		<row deletesql="DELETE FROM gmmodeltype WHERE modelType = '事务类型'" insertsql="INSERT INTO gmmodeltype (modelType) VALUES ('事务类型')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmmodeltype WHERE modelType = '分析类型'" insertsql="INSERT INTO gmmodeltype (modelType) VALUES ('分析类型')" isencrypt="0" version="1.11"/>
+		
+		<!--gmviewplugtype-->
+		<row deletesql="DELETE FROM gmviewplugtype WHERE viewplugtype = '1'" insertsql="INSERT INTO gmviewplugtype (viewplugtype, viewplugcaption) VALUES ('1', '文本框 ')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmviewplugtype WHERE viewplugtype = '2'" insertsql="INSERT INTO gmviewplugtype (viewplugtype, viewplugcaption) VALUES ('2', '日期输入框')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmviewplugtype WHERE viewplugtype = '3'" insertsql="INSERT INTO gmviewplugtype (viewplugtype, viewplugcaption) VALUES ('3', '下拉列表 ')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmviewplugtype WHERE viewplugtype = '4'" insertsql="INSERT INTO gmviewplugtype (viewplugtype, viewplugcaption) VALUES ('4', '单选框')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gmviewplugtype WHERE viewplugtype = '5'" insertsql="INSERT INTO gmviewplugtype (viewplugtype, viewplugcaption) VALUES ('5', '数据引用 ')" isencrypt="0" version="1.11"/>
+		
+		<!--gsdatabaserunsql-->
+		<row deletesql="DELETE FROM gsdatabaserunsql WHERE datatype = 'oracle'" insertsql="INSERT INTO gsdatabaserunsql (datatype, curno, runbeforeSql) VALUES ('oracle', '1', 'alter session set nls_date_format = ''yyyy-mm-dd hh24:mi:ss''')" isencrypt="0" version="1.11"/>
+		
+		<!--gxsystemparam-->
+		<row deletesql="DELETE FROM gxsystemparam WHERE paramname = '公司名称'" insertsql="INSERT INTO gxsystemparam (paramname, memo) VALUES ('公司名称', '必录')" isencrypt="0" version="1.11"/>
+		<row deletesql="DELETE FROM gxsystemparam WHERE paramname = '公司编号'" insertsql="INSERT INTO gxsystemparam (paramname, memo) VALUES ('公司编号', '必录')" isencrypt="0" version="1.11"/>
+		
+	</data>
+</root>
