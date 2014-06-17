@@ -17,8 +17,8 @@ public class Utils {
 	public void insertDts(String schemaverguid,String dtsid,String dtstype,Connection H2Conn,Connection BizConn) throws Exception {
 		ResultSet rs = null;
 		try {
-			String sql = "SELECT schemaverguid,tableguid FROM dstable " +
-					" WHERE schemaverguid = '"+schemaverguid+"' AND tabletype = '交易表' AND tablelogicname = '"+dtsid+"'  AND dtstype = '"+dtstype+"'";
+			String sql = "SELECT schemaverguid,tableguid FROM Vustablelist " +
+					" WHERE schemaverguid = '"+schemaverguid+"' AND tabletype = '交易表' AND logicname = '"+dtsid+"'  AND dtstype = '"+dtstype+"'";
 
 			rs = getrResultSetBySQL(sql, BizConn);
 			String tableguid = "";
@@ -101,11 +101,11 @@ public class Utils {
 		ResultSet rs = null;
 		try {
 			if(null != tableguid && !"".equalsIgnoreCase(tableguid) && !"null".equalsIgnoreCase(tableguid)){
-				upDateBySQL("DELETE FROM dstable WHERE schemaverguid = '"+schemaverguid+"' AND tableguid = '"+tableguid+"'", BizConn);
+				upDateBySQL("DELETE FROM Vustablelist WHERE schemaverguid = '"+schemaverguid+"' AND tableguid = '"+tableguid+"'", BizConn);
 			}
 			String sql = "SELECT dtsid, dtstype, physicaltable, periodtype FROM gmmdldts WHERE dtsid = '"+dtsid+"'";
 			rs = getrResultSetBySQL(sql, H2Conn);
-			String insertStr = "INSERT INTO dstable (tablename,tabletype,tablelogicname,dtstype,tableguid,schemaverguid )" +
+			String insertStr = "INSERT INTO Vustablelist (tablename,tabletype,logicname,dtstype,tableguid,schemaverguid )" +
 					" VALUES (?,?,?,?,?,?)";
 			PreparedStatement pst = BizConn.prepareStatement(insertStr);
 			while (rs.next()) {
