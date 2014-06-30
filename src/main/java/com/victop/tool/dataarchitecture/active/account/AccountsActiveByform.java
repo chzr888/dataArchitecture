@@ -45,7 +45,8 @@ public class AccountsActiveByform extends Active {
 		}
 		ModelidDs.close();
 		if ("".equals(modelid)) {
-			throw new Exception("没有找到modelid");
+			return null;
+//			throw new Exception("没有找到modelid");
 		}
 		ResultSet tempRS = getResultSetBySql(H2Conn, "SELECT DISTINCT accountsid FROM gmformaccount WHERE formid = '"+formid+"'");
 		while (tempRS.next()) {
