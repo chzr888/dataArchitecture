@@ -249,6 +249,8 @@ public class BusinessRulesActive extends Active {
 							+ "' "
 							+ "and columncaption not in (select columncaption from  gmdtsview where dtsid='"
 							+ dtsID + "')", H2Conn);
+			upDateBySql("UPDATE gmdtsview SET listshow = 1,viewplugtype = 4 , columnid = 'actived' " +
+					" WHERE columncaption = '生效' AND dtsid = '"+dtsID+"'", H2Conn);
 			return dtsID + ":检查成功";
 
 		} catch (Exception e) {
